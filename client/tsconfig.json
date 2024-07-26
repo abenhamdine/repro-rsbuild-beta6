@@ -1,0 +1,50 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "outDir": "build/dist",
+    "esModuleInterop": true,
+    "module": "esnext",
+    "target": "ESNext",
+    "downlevelIteration": true, // To iterate other non string type on map
+    "lib": [
+      "es2019",
+      "es6",
+      "es2017",
+      "dom",
+      "esnext.asynciterable"
+    ],
+    "types": [
+      "vite/client",
+      "vitest/globals",
+    ],
+    "sourceMap": true,
+    "allowJs": true,
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "exclude": [
+    "config-overrides.js",
+    "node_modules",
+    "client/build",
+    "server/build",
+    "dist/",
+    "scripts",
+    "acceptance-tests",
+    "src/setupTests.ts"
+  ],
+  "include": [
+    "src"
+  ]
+}

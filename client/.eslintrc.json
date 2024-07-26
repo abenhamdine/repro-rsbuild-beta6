@@ -1,0 +1,130 @@
+{
+    "ignorePatterns": [
+        "**/types/**",
+        "src/graphql/**",
+        "src/components/framework/scheduler/scheduler.d.ts"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": "latest"
+    },
+    "settings": {
+        "react": {
+            "version": "18"
+        }
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "@stylistic",
+        "react-hooks",
+        "sonarjs"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:storybook/recommended",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/stylistic",
+        "plugin:sonarjs/recommended"
+    ],
+    "rules": {
+        "complexity": [
+            "off"
+        ],
+        "@typescript-eslint/no-inferrable-types": [
+            "off"
+        ],
+        "@typescript-eslint/consistent-type-definitions": [
+            "error",
+            "type"
+        ],
+        "sonarjs/no-nested-template-literals": [
+            "off"
+        ],
+        "sonarjs/no-duplicate-string": [
+            "off"
+        ],
+        "sonarjs/prefer-single-boolean-return": [
+            "off"
+        ],
+        "react/display-name": [
+            "off"
+        ],
+        "react/no-unescaped-entities": [
+            "error",
+            {
+                "forbid": [
+                    ">",
+                    "<",
+                    "{",
+                    "}"
+                ]
+            }
+        ],
+        "sonarjs/cognitive-complexity": [
+            "off"
+        ],
+        "@typescript-eslint/ban-ts-comment": [
+            "off"
+        ],
+        "react/prop-types": [
+            "off"
+        ],
+        "react/react-in-jsx-scope": [
+            "off"
+        ],
+        "@stylistic/semi": [
+            "error",
+            "never"
+        ],
+        "@stylistic/no-confusing-arrow": [
+            "error",
+            {
+                "allowParens": true,
+                "onlyOneSimpleParam": true
+            }
+        ],
+        "@stylistic/function-call-spacing": [
+            "error",
+            "never"
+        ],
+        // Si on veut être alerté/bloqués sur les any alors c'est le boulot de typescript, pas d'ESLint
+        "@typescript-eslint/no-explicit-any": [
+            "off"
+        ],
+        "no-restricted-imports": [
+            "error",
+            {
+                "paths": [
+                    {
+                        "name": "antd",
+                        "importNames": [
+                            "Alert",
+                            "AlertProps"
+                        ],
+                        "message": "Utiliser les dérivés d'ArhAlert à la place"
+                    },
+                    {
+                        "name": "antd/lib/alert",
+                        "importNames": [
+                            "Alert",
+                            "AlertProps"
+                        ],
+                        "message": "Utiliser les dérivés d'ArhAlert à la place"
+                    },
+                    {
+                        "name": "react-media",
+                        "message": "Utiliser useArhResponsive"
+                    },
+                    {
+                        "name": "react-responsive",
+                        "message": "Utiliser useArhMedia"
+                    }
+                ]
+            }
+        ]
+    }
+}

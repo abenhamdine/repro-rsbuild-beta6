@@ -1,0 +1,42 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+node_modules/
+client/node_modules/
+client/playwright-report/
+.yarn
+
+*.pub
+.vscode/tasks.json
+.idea/
+
+# production
+dist/
+client/build
+
+# git
+.git-rewrite
+.git.bfg*
+
+# logs
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/debug.log
+**/build-storybook.log
+**/chromatic.log
+
+**/storybook-static
+
+# testing
+client/coverage
+.nyc_output/
+coverage.lcov
+client/tests-results
+
+# misc
+.DS_Store
+# fichier généré par plugin vite visualizer()
+client/stats.html
+client/eslint_report.*
+
